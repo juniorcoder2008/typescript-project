@@ -13,6 +13,7 @@ const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const ts = require('gulp-typescript');
+const prettier = require('gulp-prettier');
 
 // Initialize The Gulp Sass Module
 const gulpSass = require('gulp-sass');
@@ -41,7 +42,7 @@ const compileCss = () => {
     const plugins = [autoprefixer(), cssnano()];
 
     return gulp
-        .src('./app/style/**/*.sass')
+        .src('./app/sass/**/*.sass')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -97,8 +98,8 @@ const compileJS = () => {
 const watch = () => {
     gulp.watch(
         [
-            './app/style/**/*.sass',
-            './app/js/**/*.js',
+            './app/sass/**/*.sass',
+            './app/ts/**/*.ts',
             './app/**/*.html',
             './app/assets/*',
         ],
