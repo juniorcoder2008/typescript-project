@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "extends": ["prettier"],
+  "rules": {
+    "semi": "error",
+    "comma-spacing": "error",
+    "arrow-spacing": "error",
+    "array-bracket-spacing": "error",
+    "camelcase": "warn",
+    "brace-style": "error",
+    "prefer-const": "warn",
+    "default-case": "error",
+    "func-call-spacing": "error",
+    "key-spacing": "error"
+  }
+}

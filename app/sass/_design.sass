@@ -1,0 +1,135 @@
+// IMPORTS --------------------------------------------------------------------------------
+
+// Poppins (Font):
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+// Inter (Font):
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
+
+// Roboto Mono (Font):
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
+
+
+// VARIABLES ------------------------------------------------------------------------------
+
+// Fonts
+$heading: 'Poppins', sans-serif
+$text: 'Inter', sans-serif
+$code: 'Roboto Mono', sans-serif
+          
+// Colors
+$main: #568FF0
+$dark-main: #2F3137
+$black-main: #191A1D
+$gray: #687088
+
+$green: #27FFA9
+$red: #FF0077
+$yellow: #FFCC00
+
+$white: #eeeeee
+$black: #1b1b1b
+$fullw: #fff
+$fullb: #000
+
+// Sizes
+$borderL: 1rem
+$borderS: 0.3rem
+$desktopBodyPadding: 15rem
+$phoneBodyPadding: 3rem
+$padding: .5rem 1rem
+$transition: 150ms
+
+// Breakpoints
+$phone: 600px
+$tablet: 1400px
+$desktop: 1920px
+$desktopWQHD: 2560px
+$desktopUHD: 3840px
+
+// BOILERPLATE ----------------------------------------------------------------------------
+
+*, html
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: $text
+  color: $white
+
+body
+  width: 100%
+  height: 100%
+  background: $black-main
+
+ 
+// HTML Designs ---------------------------------------------------------------------------
+
+@mixin center()
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+button
+    border: none
+    background-color: $main
+    border-radius: $borderS
+    padding: $padding
+    cursor: pointer
+    height: 2rem
+    transition: $transition
+    font-weight: 500
+    &:hover
+        background-color: darken($main, 5)
+
+
+@mixin closeButton()
+    cursor: pointer
+    &:hover
+        .line01, .line02
+            background-color: $main
+    .line01
+        transition: $transition
+        height: 1.8rem
+        width: .25rem
+        background-color: $gray
+        position: absolute
+        transform: rotate(45deg)
+
+    .line02
+        transition: $transition
+        height: 1.8rem
+        width: .25rem
+        background-color: $gray
+        transform: rotate(-45deg)
+
+input
+    height: 2rem
+    padding: $padding
+    border-radius: $borderS
+    border: none
+    color: $white
+    background-color: $dark-main
+    transition: $transition
+    &:focus
+        outline: none
+        color: $main
+    &::placeholder
+        font-family: $code
+
+h1
+    font-family: $heading
+    font-weight: 1000
+
+h2
+    font-family: $heading
+
+p
+    font-family: $text
+    font-weight: 300
