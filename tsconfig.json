@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "CommonJS",
     "rootDir": "./app/ts/script.ts",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
