@@ -9,32 +9,104 @@
 // Roboto Mono (Font):
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
 
-
 // VARIABLES ------------------------------------------------------------------------------
 
 // Fonts
 $heading: 'Poppins', sans-serif
 $text: 'Inter', sans-serif
 $code: 'Roboto Mono', sans-serif
-          
+
 // Colors
-$main: #568FF0
-$dark-main: #2F3137
-$black-main: #191A1D
-$gray: #687088
+$jcMain: #568FF0
+$jcDark-main: #232429
+$jcBlack-main: #191A1D
+$jcGray: #687088
 
-$green: #27FFA9
-$red: #FF0077
-$yellow: #FFCC00
+$jcGreen: #27FFA9
+$jcRed: #FF0077
+$jcYellow: #FFCC00
 
-$white: #eeeeee
-$black: #1b1b1b
-$fullw: #fff
-$fullb: #000
+$jcWhite: #eeeeee
+$jcBlack: #1b1b1b
+$jcFullw: #fff
+$jcFullb: #000
+
+// Color Pallete
+$white-100: #fff
+$white-200: #dbdbdb
+$white-300: #b8b8b8
+$white-400: #9c9c9c
+
+$black-100: #000
+$black-200: #252525
+$black-300: #464646
+$black-400: #555555
+
+$blue-100: #d2ebff
+$blue-200: #52b1ff
+$blue-300: #34a4ff
+$blue-400: #008cff
+$blue-500: #2a72ad
+$blue-600: #335a7a
+$blue-700: #2d4152
+$blue-800: #232b31
+
+$red-100: #ffc3b8
+$red-200: #ff7a62
+$red-300: #ff684e
+$red-400: #fd4c2d
+$red-500: #d3432a
+$red-600: #b3503e
+$red-700: #7a3a2f
+$red-800: #42231d
+
+$yellow-100: #fff1d6
+$yellow-200: #ffcc6c
+$yellow-300: #ffba39
+$yellow-400: #ffa600
+
+$green-100: #b6e7c9
+$green-200: #67d892
+$green-300: #3ad676
+$green-400: #06df59
+$green-500: #25aa58
+$green-600: #2e754a
+$green-700: #245235
+$green-800: #243a2d
+
+$purple-100: #e4c7ff
+$purple-200: #c990ff
+$purple-300: #b86cff
+$purple-400: #9e35ff
+$purple-500: #7e37c0
+$purple-600: #5b3a7a
+$purple-700: #382947
+$purple-800: #2a242f
+
+$pink-100: #ff8ac8
+$pink-200: #ff66b8
+$pink-300: #ff42a7
+$pink-400: #ff0088
+$pink-500: #be2376
+$pink-600: #7a3459
+$pink-700: #422133
+$pink-800: #241a1f
+
+$torquoise-100: #c4fff2
+$torquoise-200: #9affe9
+$torquoise-300: #5effdc
+$torquoise-400: #00ffc8
+$torquoise-500: #3bb69b
+$torquoise-600: #2c6155
+$torquoise-700: #223f39
+$torquoise-800: #1d2926
+
+$blue-gray: #bec8d8
 
 // Sizes
 $borderL: 1rem
 $borderS: 0.3rem
+$borderR: 100rem
 $desktopBodyPadding: 15rem
 $phoneBodyPadding: 3rem
 $padding: .5rem 1rem
@@ -49,19 +121,22 @@ $desktopUHD: 3840px
 
 // BOILERPLATE ----------------------------------------------------------------------------
 
+::selection
+    background: $green
+    color: $black-main
+
 *, html
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-  font-family: $text
-  color: $white
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $text
+    color: $white
 
 body
-  width: 100%
-  height: 100%
-  background: $black-main
+    width: 100%
+    height: 100%
+    background: $black-main
 
- 
 // HTML Designs ---------------------------------------------------------------------------
 
 @mixin center()
@@ -79,7 +154,7 @@ body
 button
     border: none
     background-color: $main
-    border-radius: $borderS
+    border-radius: $borderR
     padding: $padding
     cursor: pointer
     height: 2rem
@@ -88,31 +163,10 @@ button
     &:hover
         background-color: darken($main, 5)
 
-
-@mixin closeButton()
-    cursor: pointer
-    &:hover
-        .line01, .line02
-            background-color: $main
-    .line01
-        transition: $transition
-        height: 1.8rem
-        width: .25rem
-        background-color: $gray
-        position: absolute
-        transform: rotate(45deg)
-
-    .line02
-        transition: $transition
-        height: 1.8rem
-        width: .25rem
-        background-color: $gray
-        transform: rotate(-45deg)
-
 input
     height: 2rem
     padding: $padding
-    border-radius: $borderS
+    border-radius: $borderR
     border: none
     color: $white
     background-color: $dark-main
